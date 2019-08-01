@@ -4,7 +4,7 @@ package clone_demo;
  * @author yudong
  * @create 2019-07-18 11:18
  */
-public class Teacher implements Cloneable{
+public class Teacher implements Cloneable {
     private String name;
     private Integer age;
 
@@ -31,11 +31,11 @@ public class Teacher implements Cloneable{
 
     @Override
     public String toString() {
-        return "老师：name=" + name + ", age=" + age ;
+        return "老师：name=" + name + ", age=" + age;
     }
 
     @Override
-    public Object clone() throws CloneNotSupportedException{
-                return super.clone();
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }

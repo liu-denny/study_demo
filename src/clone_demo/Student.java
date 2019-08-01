@@ -4,12 +4,12 @@ package clone_demo;
  * @author yudong
  * @create 2019-07-18 11:17
  */
-public class Student implements Cloneable{
+public class Student implements Cloneable {
     private String name;
     private Integer age;
     private Teacher teacher;
 
-    public Student(String name, Integer age,Teacher teacher) {
+    public Student(String name, Integer age, Teacher teacher) {
         this.name = name;
         this.age = age;
         this.teacher = teacher;
@@ -40,15 +40,16 @@ public class Student implements Cloneable{
     }
 
     @Override
-     public String toString() {
-         return "学生： name=" + name + ", age=" + age + ",指导" + teacher;
-      }
+    public String toString() {
+        return "学生： name=" + name + ", age=" + age + ",指导" + teacher;
+    }
+
     //浅克隆
     @Override
-    public Object clone() throws CloneNotSupportedException{
+    public Object clone() throws CloneNotSupportedException {
         return super.clone();
     }
-      //深克隆
+    //深克隆
 //    @Override
 //    protected Object clone() throws CloneNotSupportedException {
 //        Student newStudent = (Student) super.clone();

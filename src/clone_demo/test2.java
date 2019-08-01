@@ -6,8 +6,8 @@ package clone_demo;
  */
 public class test2 {
     public static void main(String[] args) {
-        Teacher teacher = new Teacher("刘老师",18);
-        Student student1 = new Student("小明",10,teacher);
+        Teacher teacher = new Teacher("刘老师", 18);
+        Student student1 = new Student("小明", 10, teacher);
         Student student2 = null;
         try {
             student2 = (Student) student1.clone();

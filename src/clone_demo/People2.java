@@ -4,7 +4,7 @@ package clone_demo;
  * @author yudong
  * @create 2019-07-18 11:01
  */
-public class People2 implements Cloneable{
+public class People2 implements Cloneable {
     private String name;
     private Integer age;
 

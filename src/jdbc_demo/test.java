@@ -20,16 +20,16 @@ public class test {
         connection.setAutoCommit(false);
         PreparedStatement statement1;
         PreparedStatement statement2;
-        try{
+        try {
             //根据sql语句，得到预编译语句对象
             statement1 = connection.prepareStatement(insert);
             statement2 = connection.prepareStatement(select);
 
-            for(int i=1;i<=10;i++){
+            for (int i = 1; i <= 10; i++) {
                 //按占位符设置参数值
-                statement1.setInt(1,i);
-                statement1.setString(2,"user_"+i);
-                statement1.setString(3,"password"+i);
+                statement1.setInt(1, i);
+                statement1.setString(2, "user_" + i);
+                statement1.setString(3, "password" + i);
                 //放入批处理队列
                 statement1.addBatch();
             }
@@ -39,17 +39,17 @@ public class test {
             //执行查询语句，得到结果集
             ResultSet result = statement2.executeQuery();
             //遍历、打印结果
-            while (result.next()){
-                System.out.println("username:"+result.getObject("username")+";password:"+result.getObject("password"));
+            while (result.next()) {
+                System.out.println("username:" + result.getObject("username") + ";password:" + result.getObject("password"));
             }
             //提交事务
             connection.commit();
 
             //关闭连接，释放资源
-            SqlUtils.release(connection,statement1,result);
-            SqlUtils.release(connection,statement2,result);
+            SqlUtils.release(connection, statement1, result);
+            SqlUtils.release(connection, statement2, result);
 
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

@@ -14,7 +14,7 @@ public class test {
 //        System.out.println(people11);
 //        System.out.println(people1 == people11);
         //clone
-        People2 people2 = new People2("people",18);
+        People2 people2 = new People2("people", 18);
         People2 people22 = null;
         try {
             people22 = (People2) people2.clone();

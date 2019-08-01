@@ -1,15 +1,15 @@
-package exercise_demo;
+package written_test;
 
 /**
  * @author yudong
- * @create 2019-07-25 15:39
+ * @create 2019-07-30 12:22
  */
 
 /**
  * 题目
  * 子线程运行10次，主线程运行5次。这样交替运行3次
  */
-public class exercise_2 {
+public class demo1 {
     public static void main(String[] args) {
         final Bussiness bussiness = new Bussiness();
 
@@ -74,7 +74,3 @@ public class exercise_2 {
         }
     }
 }
-
-
-
-
